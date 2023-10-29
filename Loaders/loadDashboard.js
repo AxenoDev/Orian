@@ -7,10 +7,10 @@ const mysql = require("mysql")
 
 module.exports = async (bot) => {
   let db = mysql.createConnection({
-        host: "162.19.13.67",
-        user: "root",
-        password: "A21@ud9R",
-        database: "Orian"
+        host: "",
+        user: "",
+        password: "",
+        database: ""
     });
     (async () => {
         let DBD = require('discord-dashboard');
@@ -96,7 +96,7 @@ module.exports = async (bot) => {
           sweetalert: {
               errors: {},
               success: {
-                  login: "Connecter avec succès !",
+                  login: "Connecter avec succÃ¨s !",
               }
           },
           preloader: {
@@ -121,7 +121,7 @@ module.exports = async (bot) => {
                   {
                     commandName: "8ball",
                     commandUsage: "/8ball <Question>",
-                    commandDescription: "Pose moi une question, j'y réponderais !",
+                    commandDescription: "Pose moi une question, j'y rÃ©ponderais !",
                     commandAlias: ""
                   },{
                     commandName: "ascii",
@@ -131,7 +131,7 @@ module.exports = async (bot) => {
                   },{
                     commandName: "leaderboard",
                     commandUsage: "/leaderboard",
-                    commandDescription: "Donne le classement de l'expériance du serveur",
+                    commandDescription: "Donne le classement de l'expÃ©riance du serveur",
                     commandAlias: ""
                   },{
                     commandName: "rank",
@@ -187,19 +187,19 @@ module.exports = async (bot) => {
                 }
               ],
             },{
-                category: "Modérations",
-                subTitle: "Permet de faire de la modération sur le serveur",
+                category: "ModÃ©rations",
+                subTitle: "Permet de faire de la modÃ©ration sur le serveur",
                 aliasesDisabled: false,
                 list: [
                 {
                     commandName: "add role masif",
                     commandUsage: "/add-role-masif <role>",
-                    commandDescription: "Ajouter un role à tous les personne du serveur",
+                    commandDescription: "Ajouter un role Ã  tous les personne du serveur",
                     commandAlias: ""
                 },{
                     commandName: "add role",
                     commandUsage: "/add-role <membre> <role> ",
-                    commandDescription: "Ajouter un role à un membre",
+                    commandDescription: "Ajouter un role Ã  un membre",
                     commandAlias: ""
                 },{
                     commandName: "ban",
@@ -239,7 +239,7 @@ module.exports = async (bot) => {
                 {
                     commandName: "unwarn",
                     commandUsage: "/unwarn <membre>",
-                    commandDescription: "Supprime le warn le plus récents.",
+                    commandDescription: "Supprime le warn le plus rÃ©cents.",
                     commandAlias: ""
                 }
                 ],
@@ -257,13 +257,13 @@ module.exports = async (bot) => {
                 ],
                 },{
                     category: "Economie",
-                    subTitle: "Permet d'avoir une économie sur le serveur",
+                    subTitle: "Permet d'avoir une Ã©conomie sur le serveur",
                     aliasesDisabled: false,
                     list: [
                     {
                         commandName: "add coins",
                         commandUsage: "/add-coins",
-                        commandDescription: "Ajoute de l'argent à un membre du serveur",
+                        commandDescription: "Ajoute de l'argent Ã  un membre du serveur",
                         commandAlias: ""
                     },
                     {
@@ -275,18 +275,18 @@ module.exports = async (bot) => {
                     {
                         commandName: "remove coins",
                         commandUsage: "/remove-coins",
-                        commandDescription: "Retire de l'argent à un membre du serveur",
+                        commandDescription: "Retire de l'argent Ã  un membre du serveur",
                         commandAlias: ""
                     },
                     {
                         commandName: "set coins",
                         commandUsage: "/set-coins",
-                        commandDescription: " Permet de m'être de l'argent d'un membre du serveur à un nombre défini",
+                        commandDescription: " Permet de m'Ãªtre de l'argent d'un membre du serveur Ã  un nombre dÃ©fini",
                         commandAlias: ""
                     }
                     ],
                 },{
-                    category: "Système",
+                    category: "SystÃ¨me",
                     subTitle: "Parametrer le bot",
                     aliasesDisabled: false,
                     list: [
@@ -335,7 +335,7 @@ module.exports = async (bot) => {
                 categoryOptionsList: [
                     {
                       optionId: "wlswitch",
-                      optionName: "Activer ou Désactiver l'option bienvenue",
+                      optionName: "Activer ou DÃ©sactiver l'option bienvenue",
                       optionDescription: "Si vous activer l'option, veuillez mettre un salon.",
                       optionType: DBD.formTypes.switch(false),
                       getActualSet: async ({guild}) => {
@@ -446,7 +446,7 @@ module.exports = async (bot) => {
                 categoryOptionsList: [
                     {
                       optionId: "glswitch",
-                      optionName: "Activer ou Désactiver l'option d'au revoir",
+                      optionName: "Activer ou DÃ©sactiver l'option d'au revoir",
                       optionDescription: "Si vous activer l'option, veuillez mettre un salon.",
                       optionType: DBD.formTypes.switch(false),
                       getActualSet: async ({guild}) => {
@@ -556,7 +556,7 @@ module.exports = async (bot) => {
                 categoryOptionsList: [
                     {
                       optionId: "logsswitch",
-                      optionName: "Activer ou Désactiver l'option des logs",
+                      optionName: "Activer ou DÃ©sactiver l'option des logs",
                       optionDescription: "Si vous activer l'option, veuillez mettre un salon.",
                       optionType: DBD.formTypes.switch(false),
                       getActualSet: async ({guild}) => {
@@ -666,8 +666,8 @@ module.exports = async (bot) => {
                 categoryOptionsList: [
                     {
                       optionId: "ecoswitch",
-                      optionName: "Activer ou Désactiver l'économie",
-                      optionDescription: "Activer ou Désactiver l'économie du serveur",
+                      optionName: "Activer ou DÃ©sactiver l'Ã©conomie",
+                      optionDescription: "Activer ou DÃ©sactiver l'Ã©conomie du serveur",
                       optionType: DBD.formTypes.switch(false),
                       getActualSet: async ({guild}) => {
                         // 1
@@ -735,8 +735,8 @@ module.exports = async (bot) => {
                 categoryOptionsList: [
                     {
                       optionId: "levelswitch",
-                      optionName: "Activer ou Désactiver les niveaux",
-                      optionDescription: "Activer ou Désactiver le système de niveau du serveur",
+                      optionName: "Activer ou DÃ©sactiver les niveaux",
+                      optionDescription: "Activer ou DÃ©sactiver le systÃ¨me de niveau du serveur",
                       optionType: DBD.formTypes.switch(false),
                       getActualSet: async ({guild}) => {
                         // 1
@@ -804,8 +804,8 @@ module.exports = async (bot) => {
                 categoryOptionsList: [
                     {
                         optionId: "ticketswitch",
-                        optionName: "Activer ou Désactiver les tickets",
-                        optionDescription: "Activer ou Désactiver le système de ticket du serveur",
+                        optionName: "Activer ou DÃ©sactiver les tickets",
+                        optionDescription: "Activer ou DÃ©sactiver le systÃ¨me de ticket du serveur",
                         optionType: DBD.formTypes.switch(false),
                         getActualSet: async ({guild}) => {
                           // 1
@@ -839,8 +839,8 @@ module.exports = async (bot) => {
                       },
                       {
                         optionId: "ticketsg",
-                        optionName: "Selections de la catégorie des tickets",
-                        optionDescription: "Selectionner une catégorie ou les tickets seront créer",
+                        optionName: "Selections de la catÃ©gorie des tickets",
+                        optionDescription: "Selectionner une catÃ©gorie ou les tickets seront crÃ©er",
                         optionType: DBD.formTypes.channelsSelect(
                             false,
                             (channelTypes = [GuildCategory])
